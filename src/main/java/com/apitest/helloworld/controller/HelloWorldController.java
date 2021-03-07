@@ -7,10 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/api/v1")
 @ConfigurationProperties(prefix="config")
 @Component
+@Slf4j
 public class HelloWorldController {
 
 	private String text;
@@ -44,6 +47,7 @@ public class HelloWorldController {
 	@RequestMapping(value = "/helloworld", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String HelloWorld() {  
 		
+		log.info("Info logged");
 
 		return "{\"Text\": " + getText() + ",\"Config Map\": \"" + getConfigMap() + "\",\"ConfigSecret\": \"" + getConfigSecret() + "\"}";  	  
 	}	

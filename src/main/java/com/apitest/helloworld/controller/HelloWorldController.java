@@ -1,5 +1,7 @@
 package com.apitest.helloworld.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.context.properties.*;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.*;
@@ -19,6 +21,8 @@ public class HelloWorldController {
 	private String text;
 	private String configMap;
 	private String configSecret;
+
+	private static final Logger LOGGER = LogManager.getLogger();
 	
 	public String getText() {
 		return text;
@@ -47,7 +51,7 @@ public class HelloWorldController {
 	@RequestMapping(value = "/helloworld", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String HelloWorld() {  
 		
-		log.info("Info logged");
+		LOGGER.info("Info logged");
 
 		return "{\"Text\": " + getText() + ",\"Config Map\": \"" + getConfigMap() + "\",\"ConfigSecret\": \"" + getConfigSecret() + "\"}";  	  
 	}	

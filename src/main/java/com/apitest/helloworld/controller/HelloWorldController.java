@@ -51,7 +51,7 @@ public class HelloWorldController {
 	@RequestMapping(value = "/helloworld", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String HelloWorld() {  
 		
-		LOGGER.info("Info logged data");
+		LOGGER.info("Info logged data again");
 
 		return "{\"Text\": " + getText() + ",\"Config Map\": \"" + getConfigMap() + "\",\"ConfigSecret\": \"" + getConfigSecret() + "\"}";  	  
 	}	

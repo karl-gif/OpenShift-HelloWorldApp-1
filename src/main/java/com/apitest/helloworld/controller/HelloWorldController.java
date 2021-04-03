@@ -55,4 +55,5 @@ public class HelloWorldController {
 
 		return "{\"Text\": " + getText() + ",\"Config Map\": \"" + getConfigMap() + "\",\"ConfigSecret\": \"" + getConfigSecret() + "\"}";  	  
 	}	
+	
 }

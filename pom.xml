@@ -37,28 +37,7 @@
 		     <groupId>org.springframework.boot</groupId>
 		     <artifactId>spring-boot-configuration-processor</artifactId>
 		     <optional>true</optional>
-		</dependency>
-	
-
-		 <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-            <optional>true</optional>
-        </dependency>
-
-		<dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
-
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.2.3</version>
-		</dependency>
+		</dependency>	
 
 	</dependencies>
 
@@ -73,8 +52,6 @@
 		
 
 		</plugins>
-
-		<finalName>HelloWorldRESTAPI</finalName>
 		
 	</build>   
 
